@@ -6,6 +6,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('comparing-languages');
+  this.route('java-overview');
 });
 
 export default Router;

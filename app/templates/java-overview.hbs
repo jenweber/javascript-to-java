@@ -1,0 +1,74 @@
+<div class="col-md-10 topic-header-bar">An Overview of Java vs JavaScript</div>
+
+<div class="topic-subheading col-md-10">Java In a Nutshell</div>
+<div class="topic-content col-md-10">
+  <p>
+    As a language, Java is like an uptight university professor: brilliant, inspiring, demanding, anal, and unforgiving.
+    Reading up on the <a href="">history of Java</a> will help you appreciate it more when you get frustrated, and understand why it is so demanding.
+    Java is the most widely used programming language in the world, and for good reason.
+    It was developed so that programmers could write code that would work on different computers, regardless of their hardware.
+  </p>
+  <p>
+    Consequently, Java is a lot more strict than JavaScript. Before we dive into the little details...
+  </p>
+
+<h2>Here are some of the big-picture differences:</h2>
+  <table class="table">
+    <tr>
+      <th>JavaScript</th>
+      <th>Java</th>
+    </tr>
+    <tr>
+      <td>Weakly Typed. Declaring a variable as an integer is as simple as <i>let cats = 5</i></td>
+      <td>Strongly Typed. In order to declare a variable, you must also specifically state its type, such as public int cats = 5 </td>
+    </tr>
+    <tr>
+      <td>You don't need to use classes or group things into functions in order to have a functioning program</td>
+      <td>Without using this pesky function called "main" within a class, your program won't run. This is the most confusing part of Java when you are just getting started. More on this later in the tutorial.</td>
+    </tr>
+    <tr>
+      <td>When you declare a function, JavaScript doesn't care what it returns. <i>function marvel () { return "The Black Widow is the best Avenger"}</i></td>
+      <td>You must declare what a function returns, if anything. If you forget to return something, or return the wrong type, things break. This function returns a String: <i>  public String marvel() { return "So why another Spiderman reboot?"}</i></td>
+    </tr>
+    <tr>
+      <td>Array length can be modified after the array is created. <i>let avengers = ["Iron Man", "Captain America", "The Hulk", "Thor", "Black Widow", "Hawkeye"]; avengers.push("Batman");</i> JavaScript doesn't mind adding another Avenger, let alone one from the DC universe.</td>
+      <td>Array length must be declared, and cannot change. <i>public int[ ] originalAvengers = new int[6]</i> creates an array of length 6. You can't add a seventh Avenger and change the array length.</td>
+    </tr>
+    <tr>
+      <td>You can use == or === for equality comparisons. In JavaScript ES6, "5" == 5 returns true, and "5" === 5 returns false. </td>
+      <td>Only == is permitted. It is strict equality. "5" == 5 returns false.</td>
+    </tr>
+    <tr>
+      <td>A missing semicolon at the end of a line is usually ok</td>
+      <td>Your program simply won't run if it is missing a semicolon</td>
+    </tr>
+    <tr>
+      <td>You can use global variables (a variable that's not inside of a function or class). It's not a good idea, but you can do it.</td>
+      <td>There are no such thing as global variables. The closest you can get are "instance variables", which can only be accessed as an attribute of an object. Riiiiight. This will be explained in plain English later.</td>
+    </tr>
+    <tr>
+      <td>Error messages are fairly simple, like <i>unexpected token</i> or <i>x is not defined</i></td>
+      <td>Error messages are often totally different than JavaScript. Here's an example of a really common error. <i>Main.java:4: error: non-static variable x cannot be referenced from a static context</i></td>
+    </tr>
+  </table>
+
+<h2>The good news is, a lot is familiar.</h2>
+<p>Here's a for loop.</p>
+  for (int i=0; i  myArray.length; i++) { <br>
+    *** some code ***<br>
+  }<br>
+
+<p>You can navigate to an item in an array like this:</p>
+  public int[ ] array = {"cat", "dog", "hamster"}; <br>
+  return array[1]; <br>
+  This will return "dog"<br>
+
+  <p> You can print things to the console for debugging.</p>
+  System.out.println("here's my custom error message");
+
+<h2>Not so bad, right?</h2>
+
+<a class="btn btn-default" href="#" role="button">Next</a>
+</div>
+
+{{outlet}}

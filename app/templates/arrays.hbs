@@ -1,0 +1,74 @@
+<!-- Need to update JS so that array is initialized with the proper length -->
+<!-- Add what it looks like when you print an empty java array into the console -->
+<div class="col-md-10 topic-header-bar">Arrays</div>
+
+<div class="topic-subheading col-md-10">Declaring One Dimensional Arrays</div>
+<div class="topic-content col-md-10">
+<p>Fortunately, once you know how to declare other types of variables in Java, arrays are not that much different.</p>
+<p>Here's a simple 1 dimensional array declaration:</p>
+<div class="java-code code-comparison">
+  public int[] myJavaArray = new int[8];
+</div>
+<div class="js-code code-comparison">
+  let myJsArray = [];
+</div>
+<p>In plain English, this will create an array with eight items, and Java will expect all future contents to be integers. Let's print it to the console.</p>
+<div class="java-code">
+  public int[] myJavaArray = new int[8];
+  System.out.println(myJavaArray);
+</div>
+<div class="reveal-code-comparison"></div>
+<div class="js-code code-comparison">
+  let myJsArray = [];
+  console.log(myJsArray);
+</div>
+<p>But suppose you already know the values you want to include in your array. A JavaScript programmer would expect to use [square brackets] but note the {curly braces} used in the Java declaration!</p>
+<div class="java-code">
+  public int[] myJavaArray = {10, 5, 6, 2, 4, 3, 9, 7};
+  System.out.println(myJavaArray);
+</div>
+<div class="reveal-code-comparison"></div>
+<div class="js-code code-comparison">
+  let myJsArray = [10, 5, 6, 2, 4, 3, 9, 7];
+  console.log(myJsArray);
+</div>
+
+<p>Lastly, sometimes you may want an array of a specific length, but instead of being full of null, you want each item in your array to be set to a default value. There's a handy function for that called Fill. It takes two arguments, your array and the value that you want to fill that array with.</p>
+<div class="java-code">
+  public int[] myJavaArray = new int[8];
+  Arrays.fill(myJavaArray, 0);
+  System.out.println(myJavaArray);
+</div>
+<div class="reveal-code-comparison"></div>
+<div class="js-code code-comparison">
+  let myJsArray = [];
+  myJsArray.fill(0, 0, 8)
+  // In JavaScript, fill takes three arguments, the value you want to fill, the starting index, and the ending index
+  console.log(myJsArray);
+  // [0,0,0,0,0,0,0,0] prints to the console
+</div>
+
+<div class="activity-instructions col-md-5">
+  Give it a try! Declare an array of strings with length 3. You can use any strings of your choice, such as "apples", "bananas", "oranges".
+</div>
+<div class="activity-submission col-md-5">
+  <input type="text"></input>
+  <div class="btn btn-primary"></div>
+</div>
+
+<div class="activity-instructions col-md-5">
+  Now declare a different array of double (aka decimal) numbers, with an array length of 40. Do not provide the numbers themselves in the array. Too much typing.
+</div>
+<div class="activity-submission col-md-5">
+  <input type="text"></input>
+  <div class="btn btn-primary"></div>
+</div>
+<div class="activity-instructions col-md-5">
+  Now, using the array you declared in the previous activity, fill each item in the array with the value 0.55
+</div>
+<div class="activity-submission col-md-5">
+  <input type="text"></input>
+  <div class="btn btn-primary"></div>
+</div>
+
+{{outlet}}

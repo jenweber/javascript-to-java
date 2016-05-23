@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('comparing-languages');
   this.route('java-overview');
+  this.route('arrays');
 });
 
 export default Router;
